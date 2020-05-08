@@ -3,6 +3,7 @@ import csv
 import time
 import webbrowser
 import keyboard
+from termcolor import colored
 
 
 chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
@@ -25,6 +26,7 @@ for url in urls:
     for link in url:
         r = requests.get(link)
         r.encoding = 'utf-8'
+        print(link)
         print(r)
         index += 1
         print(index)
@@ -33,4 +35,4 @@ for url in urls:
         # webbrowser.get(chrome_path).open(link)
 
     html_content = r.text
-    print('fetched')
+    print(colored('fetched \n', 'green'))
