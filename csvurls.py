@@ -8,7 +8,7 @@ import keyboard
 chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
 index = 0
-https: // github.com/suggy33/PythonLoopOverCsvUrls.git
+
 
 urls = []
 # r = requests.get(row)
@@ -28,6 +28,8 @@ for url in urls:
         print(r)
         index += 1
         print(index)
+
+        # to Open in Browser uncomment next line
         # webbrowser.get(chrome_path).open(link)
 
     html_content = r.text
